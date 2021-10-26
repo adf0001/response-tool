@@ -1,6 +1,6 @@
 {
   "name": "response-tool",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "response tool",
   "main": "response-tool.js",
   "scripts": {
@@ -10,5 +10,16 @@
     "response"
   ],
   "author": "fwg",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adf0001/response-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adf0001/response-tool/issues"
+  },
+  "homepage": "https://github.com/adf0001/response-tool#readme"
 }
