@@ -1,0 +1,14 @@
+{
+  "name": "response-tool",
+  "version": "1.0.1",
+  "description": "response tool",
+  "main": "response-tool.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "response"
+  ],
+  "author": "fwg",
+  "license": "ISC"
+}
