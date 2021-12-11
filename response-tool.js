@@ -12,26 +12,19 @@ var outputJson = function (res, json, status, header) {
 	outputText(res, JSON.stringify(json), status, header || { 'Content-Type': 'text/json;charset=UTF-8' });
 }
 
-var outputError = function (res, error, status, header, noTimestamp) {
+var outputError = function (res, error, status, header) {
 	var err;
 
 	if (typeof error !== "object") { err = error; }
 	else if (error instanceof Error) { err = error.message; }
 	else { err = JSON.stringify(error); }
-	
-	if (!noTimestamp) err += ", tm=" + (new Date()).getTime();
 
 	outputText(res, err, status || 500, header);
 }
 
-var outputErrorOrData = function (res, error, data, status, header, noTimestamp) {
-	if (error) outputError(res, error, status, header, noTimestamp);
-	else {
-		data = { data: data };
-		if (!noTimestamp) data.tm = (new Date()).getTime();
-
-		outputJson(res, data, status, header);
-	}
+var outputErrorOrData = function (res, error, data, status, header) {
+	if (error) outputError(res, error, status, header);
+	else outputJson(res, data, status, header);
 }
 
 //module

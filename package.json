@@ -1,6 +1,6 @@
 {
   "name": "response-tool",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "response tool",
   "main": "response-tool.js",
   "scripts": {
