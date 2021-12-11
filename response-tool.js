@@ -13,13 +13,15 @@ var outputJson = function (res, json, status, header) {
 }
 
 var outputError = function (res, error, status, header, noTimestamp) {
-	var err = noTimestamp ? {} : { tm: (new Date()).getTime() };
+	var err;
 
-	if (typeof error !== "object") { err.error = error; }
-	else if (error instanceof Error) { err.error = error.message; }
-	else { err.error = error; }
+	if (typeof error !== "object") { err = error; }
+	else if (error instanceof Error) { err = error.message; }
+	else { err = JSON.stringify(error); }
+	
+	if (!noTimestamp) err += ", tm=" + (new Date()).getTime();
 
-	outputJson(res, err, status || 500, header);
+	outputText(res, err, status || 500, header);
 }
 
 var outputErrorOrData = function (res, error, data, status, header, noTimestamp) {

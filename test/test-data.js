@@ -34,15 +34,15 @@ module.exports = {
 		console.log(rsl);
 
 		var expect = [
-			'200:{"Content-Type":"text/plain;charset=UTF-8"}',	'a1',
-			'201:{"bbb":1}',	'a2',
-			'202:{"Content-Type":"text/json;charset=UTF-8"}',	'{"bbb":2}',
-			'500:{"Content-Type":"text/json;charset=UTF-8"}',	'{"error":"err1"}',
-			'501:{"Content-Type":"text/json;charset=UTF-8"}',	'{"error":"err2"}',
-			'502:{"Content-Type":"text/json;charset=UTF-8"}',	'{"error":{"err":"err3"}}',
-			'503:{"Content-Type":"text/json;charset=UTF-8"}',	'{"error":"err5"}',
-			'200:{"Content-Type":"text/json;charset=UTF-8"}',	'{"data":"data6"}',
-			'200:{"h":7}',	'{"data":{"d":"data7"}}',
+			'200:{"Content-Type":"text/plain;charset=UTF-8"}', 'a1',
+			'201:{"bbb":1}', 'a2',
+			'202:{"Content-Type":"text/json;charset=UTF-8"}', '{"bbb":2}',
+			'500:{"Content-Type":"text/plain;charset=UTF-8"}', 'err1',
+			'501:{"Content-Type":"text/plain;charset=UTF-8"}', 'err2',
+			'502:{"Content-Type":"text/plain;charset=UTF-8"}', '{"err":"err3"}',
+			'503:{"Content-Type":"text/plain;charset=UTF-8"}', 'err5',
+			'200:{"Content-Type":"text/json;charset=UTF-8"}', '{"data":"data6"}',
+			'200:{"h":7}', '{"data":{"d":"data7"}}',
 		];
 
 
